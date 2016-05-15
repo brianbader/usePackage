@@ -5,7 +5,7 @@ usePackage <- function(p) {
   if(length(newPackages))
     install.packages(newPackages, dependencies = TRUE)
   cat("Packages successfully loaded:\n")
-  sapply(p, require, character.only = TRUE)
+  sapply(p, require, character.only = TRUE, quietly = TRUE)
 }
 
 ## Example
